@@ -1,0 +1,42 @@
+## Doxurus Core configuration settings
+# See more on https://doxurus.inet2.org
+
+# Site configurations
+sitename: Doxurus
+subtitle: Doc sites are wonderful.
+icon: /favicon.ico
+
+# Theme
+theme: nature
+
+# Top Menubar
+menubar:
+  enable: false
+  links:
+    Home: /#
+    About: /about.html
+
+# Cover page
+cover:
+  enable: false
+  buttons:
+    start: true
+    about: /about/
+
+# Use different css files
+main_css: theme
+bar_css: theme
+
+## Search engine
+search:
+  enable: true
+  ## Search file
+  file:
+    type: json
+    name: search.json
+
+# Emojis
+emoji: false
+
+# Scrolling (milliseconds)
+scrolltime: 800
