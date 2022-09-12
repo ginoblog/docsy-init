@@ -12,7 +12,7 @@ git clone https://github.com/ginoblog/docso.git (your site path)
 ```
 
 Download manually:
-![https://docso.inet2.org/download/]Download here
+[Download here](https://docso.inet2.org/download/ "Downloads")
 
 ## How to use
 
@@ -28,4 +28,5 @@ Still developing
 
 ## Contributors
 
-@ginoblog,@sclass53
+@ginoblog
+@sclass53
