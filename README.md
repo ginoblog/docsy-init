@@ -1,4 +1,4 @@
-# Docso
+# Docsy
 
 A docs site generator written with Python.
 
@@ -8,11 +8,11 @@ Install using Git or download manually
 
 **Git:**
 ```bash
-git clone https://github.com/ginoblog/docso.git (your site path)
+git clone https://github.com/ginoblog/docsy.git (your site path)
 ```
 
 Download manually:
-[Download here](https://docso.inet2.org/download/ "Downloads")
+[Download here](https://docsy.inet2.org/download/ "Downloads")
 
 ## How to use
 
