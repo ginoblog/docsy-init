@@ -40,3 +40,7 @@ emoji: false
 
 # Scrolling (milliseconds)
 scrolltime: 800
+
+# Auto Uppercase
+# title: false
+title: true

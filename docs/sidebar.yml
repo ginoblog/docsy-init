@@ -1,7 +1,6 @@
 # Custom sidebar
 
-Home: /index.html
-About: /about.html
-
+Home: index.md
 Examples:
-  Tutorial: /tutorial.html 
+  About: about.md
+  
