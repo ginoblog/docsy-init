@@ -36,7 +36,7 @@ def openf(fname):
 
 import glob
 
-flist=glob.glob(__file__[:-17]+"docs/*.*")
+flist=glob.glob(__file__[:-17]+"_docs/*.*")
 
 
 for i in flist:
