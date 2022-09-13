@@ -10,7 +10,7 @@ HTMLsc="<link rel='stylesheet' href='%s' /><script src='js/scrolling.js'></scrip
 with open(__file__[:-17]+"__config__.yml","r",encoding="utf-8") as f:
     global CONF
     CONF=yaml.safe_load(f)
-with open(__file__[:-17]+"docs\\sidebar.yml","r",encoding="utf-8") as fi:
+with open(__file__[:-17]+"\\sidebar.yml","r",encoding="utf-8") as fi:
     global SIDE
     SIDE=yaml.safe_load(fi)
 print(SIDE)
@@ -103,7 +103,7 @@ def init():
     sub=CONF["subtitle"]
     ##print(stname)
     
-    fname=__file__[:-17]+"docs\\index.md"
+    fname=__file__[:-17]+"_docs\\index.md"
     f=codecs.open(fname,mode="r",encoding="utf-8")
     _rr=f.read()
     f.close() 
@@ -151,7 +151,7 @@ def main():
     import glob
     
     try:
-        flist=glob.glob(__file__[:-17]+"docs/*.*")
+        flist=glob.glob(__file__[:-17]+"_docs/*.*")
         shutil.copyfile(styPATH+STYLE+'.css',__file__[:-17]+"public\\"+STYLE+'.css')
     except:
         print("DOCSY: Docs folder does not exist!")
