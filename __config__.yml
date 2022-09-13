@@ -1,8 +1,8 @@
-## Doxurus Core configuration settings
-# See more on https://doxurus.inet2.org
+## Docsy Core configuration settings
+# See more on https://docsy.inet2.org
 
 # Site configurations
-sitename: Doxurus
+sitename: Docsy
 subtitle: Doc sites are wonderful.
 icon: /favicon.ico
 

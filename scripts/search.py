@@ -1,4 +1,4 @@
-# Docso renderer
+# Docso searcher generate
 
 import markdown,yaml
 import codecs,os,re
@@ -38,11 +38,12 @@ import glob
 
 flist=glob.glob(__file__[:-17]+"_docs/*.*")
 
+flistable=[".md",".html",".txt"]
 
 for i in flist:
     temp,j=os.path.split(i)
-    print(os.path.splitext(j)[1])
-    if os.path.splitext(j)[1]!=".yml":
+    #print(os.path.splitext(j)[1])
+    if os.path.splitext(j)[1] in flistable:
         openf(i)
 
 strr=json.dumps(searchdb)

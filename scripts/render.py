@@ -4,16 +4,30 @@ import markdown,yaml
 import codecs,os,re
 import shutil
 
+try:
+    shutil.rmtree(__file__[:-17]+"public/")
+except:
+    pass
 SIDEE={}
 styPATH=__file__[:-9]+"themes\\"
-HTMLsc="<link rel='stylesheet' href='%s' /><script src='js/scrolling.js'></script><article class='main-post'><h1 class='title-name'>%s</h1>%s<title>%s</title>%s</article><script>document.getElementsByClassName('main-post')[0].style.left=document.getElementById('sidebar-nav').clientWidth;document.getElementsByClassName('main-post')[0].style.width=document.body.clientWidth-42-document.getElementById('sidebar-nav').clientWidth;</script>"
+HTMLsc="""
+<link rel='icon' type=\"image/png\" sizes='32x32' href=\"favicon.png\"/>
+<link rel='apple-touch-icon' type=\"image/png\" sizes='32x32' href=\"favicon.png\"/>
+<link rel='stylesheet' href='%s' />
+<script src='js/scrolling.js'></script>
+<article class='main-post'>
+    <h1 class='title-name'>%s</h1>%s
+    <title>%s</title>%s
+</article>
+<script>document.getElementsByClassName('main-post')[0].style.left=document.getElementById('sidebar-nav').clientWidth;document.getElementsByClassName('main-post')[0].style.width=document.body.clientWidth-42-document.getElementById('sidebar-nav').clientWidth;</script>
+"""
 with open(__file__[:-17]+"__config__.yml","r",encoding="utf-8") as f:
     global CONF
     CONF=yaml.safe_load(f)
-with open(__file__[:-17]+"\\sidebar.yml","r",encoding="utf-8") as fi:
+with open(__file__[:-17]+"_docs/sidebar.yml","r",encoding="utf-8") as fi:
     global SIDE
     SIDE=yaml.safe_load(fi)
-print(SIDE)
+#print(SIDE)
 STYLE=CONF["theme"]
 SCROLLTIME=CONF["scrolltime"]
 TITLE=CONF["title"]
@@ -168,7 +182,7 @@ def main():
         for i in flist:
             temp,j=os.path.split(i)
             ##print(os.path.splitext(j)[1])
-            if os.path.splitext(j)[1]!=".md" and os.path.splitext(j)[1]!=".html" and os.path.splitext(j)[1]!=".yml":
+            if (os.path.splitext(j)[1]!=".md" and os.path.splitext(j)[1]!=".html" and os.path.splitext(j)[1]!=".yml") or os.path.splitext(j)[1]==".ico":
                 shutil.copyfile(i,__file__[:-17]+"public\\"+j)
             elif os.path.splitext(j)[1]!=".yml":
                 openf(i)
@@ -184,6 +198,7 @@ def main():
         ##print(titlist)
         init()
     except Exception as e:
-        print("DOCSY: Unknown error ",e)
+        print("DOCSY: Unknown error:",e)
 
 main()
+print("SUCCESS")
