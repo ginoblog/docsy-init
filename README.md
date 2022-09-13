@@ -1,3 +1,5 @@
+# Important: this is the docsy-init repository! not the package!
+
 # Docsy
 
 A docs site generator written with Python.
